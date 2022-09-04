@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/regstration_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      home: HomeScreen(),
+      routes: {
+        "/": (context) => LoginScreen(),
+        "/Registration": (context) => RegistrationScreen()
+      },
     );
   }
 }
