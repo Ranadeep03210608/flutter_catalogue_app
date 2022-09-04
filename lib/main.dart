@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'screens/login_screen.dart';
-import 'screens/regstration_screen.dart';
+import 'package:flutter_catalogue_app/screens/welcome_screen/welcome_screen.dart';
+import 'screens/home_screen/home_screen.dart';
+import 'screens/auth_screens/login_screen.dart';
+import 'screens/auth_screens/regstration_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      theme: ThemeData.light(),
       routes: {
-        "/": (context) => LoginScreen(),
-        "/Registration": (context) => RegistrationScreen()
+        "/": (context) => WelcomeScreen(),
+        "/loginScreen": (context) => LoginScreen(),
+        "/Registration": (context) => RegistrationScreen(),
+        "/home": (context) => HomeScreen()
       },
     );
   }
