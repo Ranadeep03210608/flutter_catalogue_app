@@ -13,11 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
+      home: HomeScreen(),
       routes: {
-        "/": (context) => WelcomeScreen(),
+        //"/": (context) => WelcomeScreen(),
         "/loginScreen": (context) => LoginScreen(),
         "/Registration": (context) => RegistrationScreen(),
-        "/home": (context) => HomeScreen()
+        //"/home": (context) => HomeScreen()
       },
     );
   }
